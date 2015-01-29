@@ -26,8 +26,11 @@ var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 $("#topContacts").prepend(formattedMobile);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-$("#header").prepend(formattedBioPic);
 $("#header").prepend(formattedRole);
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").prepend(formattedName);
+
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+$("#header").append(formattedBioPic);
+var formattedMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+$("#header").append(formattedMessage);
