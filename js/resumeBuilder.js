@@ -15,16 +15,17 @@ var bio = {
 }
 
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#header").prepend(formattedLocation);
+$("#topContacts").prepend(formattedLocation);
 var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#header").prepend(formattedGithub);
+$("#topContacts").prepend(formattedGithub);
 var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-$("#header").prepend(formattedTwitter);
+$("#topContacts").prepend(formattedTwitter);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#header").prepend(formattedEmail);
+$("#topContacts").prepend(formattedEmail);
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#header").prepend(formattedMobile);
+$("#topContacts").prepend(formattedMobile);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+
 $("#header").prepend(formattedRole);
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").prepend(formattedName);
