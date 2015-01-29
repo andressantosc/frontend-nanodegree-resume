@@ -20,18 +20,18 @@ var work = {
 	"position": "Co-founder",
 	"employer": "Neomesa S.A. de C.V.",
 	"yearsWorked": "2012 - Present",
-	"city": "Monterrey"
+	"city": "Monterrey",
+	"description": "Retail operations focusing on the Restaurant Industry."
 };
-
 
 // Declared object that contains education information
 var edu = {
 	"school": "Northeastern University",
-	"graduation": "2016";
+	"graduation": "2016",
 	"city": "Boston"
 };
 
-// Introduced contact information to the HTML
+// Inserted contact information to the HTML
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").prepend(formattedLocation);
 var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
@@ -44,30 +44,31 @@ var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 $("#topContacts").prepend(formattedMobile);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
-// Introduced Title Name and Role to HTML
+// Inserted Title Name and Role to HTML
 $("#header").prepend(formattedRole);
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").prepend(formattedName);
 
-//Introduced Profile Picture and Welcome Message to HTML
+// Inserted Profile Picture and Welcome Message to HTML
 var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
 $("#header").append(formattedBioPic);
 var formattedMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(formattedMessage);
 
-//Introduced Skills to HTML (unfinished)
+// Inserted Skills to HTML (unfinished)
 $("#header").append(HTMLskillsStart);
 var formattedSkills = HTMLskills.replace("%data%", bio.skills[0]);
 $("#header").append(formattedSkills);
 var formattedSkills1 = HTMLskills.replace("%data%", bio.skills[1]);
 $("#header").append(formattedSkills1);
 
-
-
-
-
-
-
+// Inserted Work to HTML
+$("#workExperience").append(HTMLworkStart);
+$("#workExperience").append(HTMLworkEmployer.replace("%data%", work.employer));
+$("#workExperience").append(HTMLworkTitle.replace("%data%", work.position));
+$("#workExperience").append(HTMLworkDates.replace("%data%", work.yearsWorked));
+$("#workExperience").append(HTMLworkLocation.replace("%data%", work.city));
+$("#workExperience").append(HTMLworkDescription.replace("%data%", work.description));
 
 
 
