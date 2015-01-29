@@ -1,7 +1,20 @@
-var name = "Andres Santos"
-var role = "Web Developer";
-var formattedName = HTMLheaderName.replace("%data%", name);
-var formattedRole = HTMLheaderRole.replace("%data%", role);
+var bio = {
+	"name": "Andres Santos",
+	"role": "Web Developer",
+	"contacts": {
+		"mobile":"811-243-0989",
+		"email": "andres.santos188@gmail.com",
+		"github": "andressantosc",
+		"twitter": "asantos188",
+		"location": "Monterrey, Mexico"
+	},
+	"welcomeMessage": "Hello everybody! Welcome to my Resume.",
+	"skills": ["Entrepreneur", "Programmer", "Self-motivated", 
+	"Great people skills"],
+	"bioPic": "images/Profile.jpg"
+}
 
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").prepend(formattedRole);
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").prepend(formattedName);
