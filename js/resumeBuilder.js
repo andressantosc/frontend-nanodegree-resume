@@ -13,11 +13,23 @@ var bio = {
 	"skills": ["Entrepreneur", "Programmer", "Self-motivated", 
 	"Great people skills"],
 	"bioPic": "images/Profile.jpg"
-}
+};
 
 // Declared object that contains work information
+var work = {
+	"position": "Co-founder",
+	"employer": "Neomesa S.A. de C.V.",
+	"yearsWorked": "2012 - Present",
+	"city": "Monterrey"
+};
+
 
 // Declared object that contains education information
+var edu = {
+	"school": "Northeastern University",
+	"graduation": "2016";
+	"city": "Boston"
+};
 
 // Introduced contact information to the HTML
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
