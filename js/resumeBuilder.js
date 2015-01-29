@@ -28,3 +28,5 @@ var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").prepend(formattedRole);
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").prepend(formattedName);
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+$("#header").prepend(formattedBioPic);
