@@ -146,5 +146,33 @@ $("#education").append(HTMLschoolDegree.replace("%data%", edu.schools[2].degree)
 $("#education").append(HTMLschoolDates.replace("%data%", edu.schools[2].dates));
 $("#education").append(HTMLschoolLocation.replace("%data%", edu.schools[2].city));
 
+// Inserted Projects to HTML
+$("#projects").append(HTMLprojectStart);
+$("#projects").append(HTMLprojectTitle.replace("%data%", projects.projects[0].title));
+$("#projects").append(HTMLprojectDates.replace("%data%", projects.projects[0].dates));
+$("#projects").append(HTMLprojectDescription.replace("%data%", projects.projects[0].description));
+$("#projects").append(HTMLprojectImage.replace("%data%", projects.projects[0].image));
+$("#projects").append(HTMLprojectTitle.replace("%data%", projects.projects[1].title));
+$("#projects").append(HTMLprojectDates.replace("%data%", projects.projects[1].dates));
+$("#projects").append(HTMLprojectDescription.replace("%data%", projects.projects[1].description));
+$("#projects").append(HTMLprojectImage.replace("%data%", projects.projects[1].image));
+$("#projects").append(HTMLprojectTitle.replace("%data%", projects.projects[2].title));
+$("#projects").append(HTMLprojectDates.replace("%data%", projects.projects[2].dates));
+$("#projects").append(HTMLprojectDescription.replace("%data%", projects.projects[2].description));
+$("#projects").append(HTMLprojectImage.replace("%data%", projects.projects[2].image));
+$("#projects").append(HTMLprojectTitle.replace("%data%", projects.projects[3].title));
+$("#projects").append(HTMLprojectDates.replace("%data%", projects.projects[3].dates));
+$("#projects").append(HTMLprojectDescription.replace("%data%", projects.projects[3].description));
+$("#projects").append(HTMLprojectImage.replace("%data%", projects.projects[3].image));
+$("#projects").append(HTMLprojectTitle.replace("%data%", projects.projects[4].title));
+$("#projects").append(HTMLprojectDates.replace("%data%", projects.projects[4].dates));
+$("#projects").append(HTMLprojectDescription.replace("%data%", projects.projects[4].description));
+$("#projects").append(HTMLprojectImage.replace("%data%", projects.projects[4].image));
+$("#projects").append(HTMLprojectTitle.replace("%data%", projects.projects[5].title));
+$("#projects").append(HTMLprojectDates.replace("%data%", projects.projects[5].dates));
+$("#projects").append(HTMLprojectDescription.replace("%data%", projects.projects[5].description));
+$("#projects").append(HTMLprojectImage.replace("%data%", projects.projects[5].image));
+
+
 
 
