@@ -28,7 +28,10 @@ var work = {
 var edu = {
 	"school": "Northeastern University",
 	"graduation": "2016",
-	"city": "Boston"
+	"city": "Boston",
+	"degree": "Bachelor of Science",
+	"major": "Management"
+
 };
 
 // Inserted contact information to the HTML
@@ -70,6 +73,13 @@ $("#workExperience").append(HTMLworkDates.replace("%data%", work.yearsWorked));
 $("#workExperience").append(HTMLworkLocation.replace("%data%", work.city));
 $("#workExperience").append(HTMLworkDescription.replace("%data%", work.description));
 
+// Inserted Education to HTML
+$("#education").append(HTMLschoolStart);
+$("#education").append(HTMLschoolName.replace("%data%", edu.school));
+$("#education").append(HTMLschoolDegree.replace("%data%", edu.degree));
+$("#education").append(HTMLschoolDates.replace("%data%", edu.graduation));
+$("#education").append(HTMLschoolLocation.replace("%data%", edu.city));
+$("#education").append(HTMLschoolMajor.replace("%data%", edu.major));
 
 
 
