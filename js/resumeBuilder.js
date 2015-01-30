@@ -48,6 +48,49 @@ var edu = {
 		}
 	]
 }
+
+// Declared object tat contains projects information
+var projects = {
+	"projects": [
+		{
+			"title": "100 Montaditos",
+			"dates": "2012 - 2015",
+			"description": "Operator of the Spanish Franchise from Madrid in Monterrey, Mexico.",
+			"image": "images/100mlogo.gif"
+		},
+		{
+			"title": "La Borra del Café" ,
+			"dates": "2014 - Present",
+			"description": "Mexican cofeehouse franchise that seeks to build spaces that help spark creativity.",
+			"image": "images/borra.png"
+		},
+		{
+			"title": "Whipped Lightning",
+			"dates": "2015",
+			"description": "Exclusive distribution rights on alchol-infused whipped cream.",
+			"image": "images/whip.gif"
+		},
+		{
+			"title": "Autumn",
+			"dates": "2015",
+			"description": "The falling of the leaves and the start of winter.",
+			"image": "images/autumn.gif"
+		},
+		{
+			"title": "Your Story Matters",
+			"dates": "2015",
+			"description": "Tell your story in a collaborative environment.",
+			"image": "images/openbook.gif"
+		},
+		{
+			"title": "DonationPlus",
+			"dates": "2015",
+			"description": "Kickstarter-like site to crowdfund NGOs.",
+			"image": "images/donate.gif"
+		}
+	]
+}
+
 // Inserted contact information to the HTML
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").prepend(formattedLocation);
