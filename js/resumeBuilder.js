@@ -116,12 +116,13 @@ var formattedMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(formattedMessage);
 
 // Inserted Skills to HTML (unfinished)
-$("#header").append(HTMLskillsStart);
-var formattedSkills = HTMLskills.replace("%data%", bio.skills[0]);
-$("#header").append(formattedSkills);
-var formattedSkills1 = HTMLskills.replace("%data%", bio.skills[1]);
-$("#header").append(formattedSkills1);
-
+if (bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+	$("#skills").append(HTMLskills.replace("%data%", bio.skills[0]));
+	$("#skills").append(HTMLskills.replace("%data%", bio.skills[1]));
+	$("#skills").append(HTMLskills.replace("%data%", bio.skills[2]));
+	$("#skills").append(HTMLskills.replace("%data%", bio.skills[3]));
+}
 // Inserted Work to HTML
 $("#workExperience").append(HTMLworkStart);
 $("#workExperience").append(HTMLworkEmployer.replace("%data%", work.employer));
