@@ -9,7 +9,7 @@ var bio = {
 		"twitter": "asantos188",
 		"location": "Monterrey, Mexico"
 	},
-	"welcomeMessage": "Hello everybody! Welcome to my Resume.",
+	"welcomeMessage": "My objective is to work and succeed beyond expectations in a demanding and enriching environment where I will be able to get a fast-paced learning experience. To revise and expand what I’ve learned as an entrepreneur and apply it in company with a larger scale. To develop the necessary skills to get into a top tier business school and get a master’s degree.",
 	"skills": ["Entrepreneur", "Programmer", "Self-motivated", 
 	"Great people skills"],
 	"bioPic": "images/Profile.jpg"
@@ -17,12 +17,23 @@ var bio = {
 
 // Declared object that contains work information
 var work = {
-	"position": "Co-founder",
-	"employer": "Neomesa S.A. de C.V.",
-	"yearsWorked": "2012 - Present",
-	"city": "Monterrey",
-	"description": "Retail operations focusing on the Restaurant Industry."
-};
+	"jobs": [ 
+		{ 
+			"position": "Co-founder",
+			"employer": "Neomesa S.A. de C.V.",
+			"yearsWorked": "2012 - Present",
+			"city": "Monterrey",
+			"description": "Retail operations focusing on the Restaurant Industry."
+		},
+		{
+			"position": "Financial Analyst Intern",
+			"employer": "Alfa Corporativo",
+			"yearsWorked": "2010 - 2011",
+			"city": "Monterrey",
+			"description": "Focus in financial innovation and hedging strategies."
+		}
+	]
+}
 
 // Declared object that contains education information
 var edu = {
@@ -123,13 +134,19 @@ if (bio.skills.length > 0) {
 	$("#skills").append(HTMLskills.replace("%data%", bio.skills[2]));
 	$("#skills").append(HTMLskills.replace("%data%", bio.skills[3]));
 }
+
 // Inserted Work to HTML
-$("#workExperience").append(HTMLworkStart);
-$("#workExperience").append(HTMLworkEmployer.replace("%data%", work.employer));
-$("#workExperience").append(HTMLworkTitle.replace("%data%", work.position));
-$("#workExperience").append(HTMLworkDates.replace("%data%", work.yearsWorked));
-$("#workExperience").append(HTMLworkLocation.replace("%data%", work.city));
-$("#workExperience").append(HTMLworkDescription.replace("%data%", work.description));
+for (job in work.jobs) {
+	$("#workExperience").append(HTMLworkStart);
+	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].position);
+	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].city);
+	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].yearsWorked);
+	var formattedDesc = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+	$(".work-entry:last").append(formattedEmployer + formattedTitle + formattedLocation 
+		+ formattedDates + formattedDesc);
+}
 
 // Inserted Education to HTML
 $("#education").append(HTMLschoolStart);
