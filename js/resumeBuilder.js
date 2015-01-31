@@ -67,40 +67,60 @@ var projects = {
 			"title": "100 Montaditos",
 			"dates": "2012 - 2015",
 			"description": "Operator of the Spanish Franchise from Madrid in Monterrey, Mexico.",
-			"image": "images/100mlogo.gif"
+			"images": ["images/100mlogo.gif"]
 		},
 		{
 			"title": "La Borra del Café" ,
 			"dates": "2014 - Present",
 			"description": "Mexican cofeehouse franchise that seeks to build spaces that help spark creativity.",
-			"image": "images/borra.png"
+			"images": ["images/borra.png"]
 		},
 		{
 			"title": "Whipped Lightning",
 			"dates": "2015",
 			"description": "Exclusive distribution rights on alchol-infused whipped cream.",
-			"image": "images/whip.gif"
+			"images": ["images/whip.gif"]
 		},
 		{
 			"title": "Autumn",
 			"dates": "2015",
 			"description": "The falling of the leaves and the start of winter.",
-			"image": "images/autumn.gif"
+			"images": ["images/autumn.gif"]
 		},
 		{
 			"title": "Your Story Matters",
 			"dates": "2015",
 			"description": "Tell your story in a collaborative environment.",
-			"image": "images/openbook.gif"
+			"images": ["images/openbook.gif"]
 		},
 		{
 			"title": "DonationPlus",
 			"dates": "2015",
 			"description": "Kickstarter-like site to crowdfund NGOs.",
-			"image": "images/donate.gif"
+			"images": ["images/donate.gif"]
 		}
 	]
 }
+// Declare a display method for projects
+projects.display = function() {
+	for (project in projects.projects) {
+		$("#projects").append(HTMLprojectStart);
+		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+		var formattedDesc = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+		$(".project-entry:last").append(formattedTitle + formattedDates
+		 + formattedDesc);
+		if (projects.projects[project].images.length > 0) {
+			for (image in projects.projects[project].images) {
+				var formattedImg = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+				$(".project-entry:last").append(formattedImg);
+			}
+		}
+	}
+}
+
+// Display Projects
+projects.display();
 
 // Inserted contact information to the HTML
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
@@ -169,34 +189,6 @@ $("#education").append(HTMLschoolName.replace("%data%", edu.schools[2].name));
 $("#education").append(HTMLschoolDegree.replace("%data%", edu.schools[2].degree));
 $("#education").append(HTMLschoolDates.replace("%data%", edu.schools[2].dates));
 $("#education").append(HTMLschoolLocation.replace("%data%", edu.schools[2].city));
-
-// Inserted Projects to HTML
-$("#projects").append(HTMLprojectStart);
-$("#projects").append(HTMLprojectTitle.replace("%data%", projects.projects[0].title));
-$("#projects").append(HTMLprojectDates.replace("%data%", projects.projects[0].dates));
-$("#projects").append(HTMLprojectDescription.replace("%data%", projects.projects[0].description));
-$("#projects").append(HTMLprojectImage.replace("%data%", projects.projects[0].image));
-$("#projects").append(HTMLprojectTitle.replace("%data%", projects.projects[1].title));
-$("#projects").append(HTMLprojectDates.replace("%data%", projects.projects[1].dates));
-$("#projects").append(HTMLprojectDescription.replace("%data%", projects.projects[1].description));
-$("#projects").append(HTMLprojectImage.replace("%data%", projects.projects[1].image));
-$("#projects").append(HTMLprojectTitle.replace("%data%", projects.projects[2].title));
-$("#projects").append(HTMLprojectDates.replace("%data%", projects.projects[2].dates));
-$("#projects").append(HTMLprojectDescription.replace("%data%", projects.projects[2].description));
-$("#projects").append(HTMLprojectImage.replace("%data%", projects.projects[2].image));
-$("#projects").append(HTMLprojectTitle.replace("%data%", projects.projects[3].title));
-$("#projects").append(HTMLprojectDates.replace("%data%", projects.projects[3].dates));
-$("#projects").append(HTMLprojectDescription.replace("%data%", projects.projects[3].description));
-$("#projects").append(HTMLprojectImage.replace("%data%", projects.projects[3].image));
-$("#projects").append(HTMLprojectTitle.replace("%data%", projects.projects[4].title));
-$("#projects").append(HTMLprojectDates.replace("%data%", projects.projects[4].dates));
-$("#projects").append(HTMLprojectDescription.replace("%data%", projects.projects[4].description));
-$("#projects").append(HTMLprojectImage.replace("%data%", projects.projects[4].image));
-$("#projects").append(HTMLprojectTitle.replace("%data%", projects.projects[5].title));
-$("#projects").append(HTMLprojectDates.replace("%data%", projects.projects[5].dates));
-$("#projects").append(HTMLprojectDescription.replace("%data%", projects.projects[5].description));
-$("#projects").append(HTMLprojectImage.replace("%data%", projects.projects[5].image));
-
 
 
 
