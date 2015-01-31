@@ -135,18 +135,24 @@ if (bio.skills.length > 0) {
 	$("#skills").append(HTMLskills.replace("%data%", bio.skills[3]));
 }
 
-// Inserted Work to HTML
-for (job in work.jobs) {
-	$("#workExperience").append(HTMLworkStart);
-	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].position);
-	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].city);
-	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].yearsWorked);
-	var formattedDesc = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+// Create function to display Work to HTML
+function displayWork() {
 
-	$(".work-entry:last").append(formattedEmployer + formattedTitle + formattedLocation 
-		+ formattedDates + formattedDesc);
+	for (job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].position);
+		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].city);
+		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].yearsWorked);
+		var formattedDesc = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+		$(".work-entry:last").append(formattedEmployer + formattedTitle + formattedLocation 
+			+ formattedDates + formattedDesc);
+	}
 }
+
+// Display Work
+displayWork();
 
 // Inserted Education to HTML
 $("#education").append(HTMLschoolStart);
