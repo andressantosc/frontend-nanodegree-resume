@@ -15,6 +15,41 @@ var bio = {
 	"bioPic": "images/Profile.jpg"
 };
 
+// Declared method to display Bio info
+bio.display = function() {
+	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+	$("#topContacts").prepend(formattedLocation);
+	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	$("#topContacts").prepend(formattedGithub);
+	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+	$("#topContacts").prepend(formattedTwitter);
+	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	$("#topContacts").prepend(formattedEmail);
+	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+	$("#topContacts").prepend(formattedMobile);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	// Inserted Title Name and Role to HTML
+	$("#header").prepend(formattedRole);
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	$("#header").prepend(formattedName);
+	// Inserted Profile Picture and Welcome Message to HTML
+	var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+	$("#header").append(formattedBioPic);
+	var formattedMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+	$("#header").append(formattedMessage);
+	// Inserted Skills to HTML (unfinished)
+	if (bio.skills.length > 0) {
+		$("#header").append(HTMLskillsStart);
+		for (skill in bio.skills) {
+			formattedSkill = HTMLskills.replace("%data%", bio.skills[skill])
+			$("#skills:last").append(formattedSkill);
+		}
+	}
+}
+
+// Display Bio
+bio.display();
+
 // Declared object that contains work information
 var work = {
 	"jobs": [ 
@@ -22,43 +57,77 @@ var work = {
 			"position": "Co-founder",
 			"employer": "Neomesa S.A. de C.V.",
 			"yearsWorked": "2012 - Present",
-			"city": "Monterrey",
+			"location": "Monterrey",
 			"description": "Retail operations focusing on the Restaurant Industry."
 		},
 		{
 			"position": "Financial Analyst Intern",
 			"employer": "Alfa Corporativo",
 			"yearsWorked": "2010 - 2011",
-			"city": "Monterrey",
+			"location": "Monterrey",
 			"description": "Focus in financial innovation and hedging strategies."
 		}
 	]
 }
 
+// Create function to display Work to HTML
+work.display = function() {
+
+	for (job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].position);
+		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].yearsWorked);
+		var formattedDesc = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+		$(".work-entry:last").append(formattedEmployer + formattedTitle + formattedLocation 
+			+ formattedDates + formattedDesc);
+	}
+}
+
+// Display Work
+work.display();
+
 // Declared object that contains education information
-var edu = {
+var education = {
 	"schools": [
 		{
 			"name": "Northeastern University",
-			"dates": "2016",
-			"city": "Boston",
-			"degree": "Bachelor of Science",
-			"major": "Management"
+			"dates": "2014 - 2016",
+			"location": "Boston",
+			"degree": "B.S. in Management"
 		},
 		{
 			"name": "Harvard University",
 			"dates": "2013 - 2014",
-			"city": "Boston",
+			"location": "Boston",
 			"degree": "Harvard Extension Classes"
 		},
 		{
 			"name": "Monterrey Institute of Technology",
 			"dates": "2010 - 2013",
-			"city": "Monterrey",
+			"location": "Monterrey",
 			"degree": "B.A. in Economics"
 		}
 	]
 }
+
+// Delcared a display method for education
+education.display = function() {
+	for (school in education.schools) {
+		$("#education").append(HTMLschoolStart);
+		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+		$(".education-entry:last").append(formattedName + formattedDates + formattedLocation
+			+ formattedDegree);
+	}
+}
+
+// Display education
+education.display();
 
 // Declared object tat contains projects information
 var projects = {
@@ -122,73 +191,5 @@ projects.display = function() {
 // Display Projects
 projects.display();
 
-// Inserted contact information to the HTML
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#topContacts").prepend(formattedLocation);
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#topContacts").prepend(formattedGithub);
-var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-$("#topContacts").prepend(formattedTwitter);
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#topContacts").prepend(formattedEmail);
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#topContacts").prepend(formattedMobile);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-
-// Inserted Title Name and Role to HTML
-$("#header").prepend(formattedRole);
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-$("#header").prepend(formattedName);
-
-// Inserted Profile Picture and Welcome Message to HTML
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-$("#header").append(formattedBioPic);
-var formattedMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#header").append(formattedMessage);
-
-// Inserted Skills to HTML (unfinished)
-if (bio.skills.length > 0) {
-	$("#header").append(HTMLskillsStart);
-	$("#skills").append(HTMLskills.replace("%data%", bio.skills[0]));
-	$("#skills").append(HTMLskills.replace("%data%", bio.skills[1]));
-	$("#skills").append(HTMLskills.replace("%data%", bio.skills[2]));
-	$("#skills").append(HTMLskills.replace("%data%", bio.skills[3]));
-}
-
-// Create function to display Work to HTML
-function displayWork() {
-
-	for (job in work.jobs) {
-		$("#workExperience").append(HTMLworkStart);
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].position);
-		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].city);
-		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].yearsWorked);
-		var formattedDesc = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-
-		$(".work-entry:last").append(formattedEmployer + formattedTitle + formattedLocation 
-			+ formattedDates + formattedDesc);
-	}
-}
-
-// Display Work
-displayWork();
-
-// Inserted Education to HTML
-$("#education").append(HTMLschoolStart);
-$("#education").append(HTMLschoolName.replace("%data%", edu.schools[0].name));
-$("#education").append(HTMLschoolDegree.replace("%data%", edu.schools[0].degree));
-$("#education").append(HTMLschoolDates.replace("%data%", edu.schools[0].dates));
-$("#education").append(HTMLschoolLocation.replace("%data%", edu.schools[0].city));
-$("#education").append(HTMLschoolMajor.replace("%data%", edu.schools[0].major));
-$("#education").append(HTMLschoolName.replace("%data%", edu.schools[1].name));
-$("#education").append(HTMLschoolDegree.replace("%data%", edu.schools[1].degree));
-$("#education").append(HTMLschoolDates.replace("%data%", edu.schools[1].dates));
-$("#education").append(HTMLschoolLocation.replace("%data%", edu.schools[1].city));
-$("#education").append(HTMLschoolName.replace("%data%", edu.schools[2].name));
-$("#education").append(HTMLschoolDegree.replace("%data%", edu.schools[2].degree));
-$("#education").append(HTMLschoolDates.replace("%data%", edu.schools[2].dates));
-$("#education").append(HTMLschoolLocation.replace("%data%", edu.schools[2].city));
-
-
-
+// Create Google Map
+$('#mapDiv').append(googleMap);
