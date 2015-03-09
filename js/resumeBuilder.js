@@ -12,7 +12,10 @@ var bio = {
 	"welcomeMessage": "My objective is to work and succeed beyond expectations in a demanding and enriching environment where I will be able to get a fast-paced learning experience. To revise and expand what I’ve learned as an entrepreneur and apply it in company with a larger scale. To develop the necessary skills to get into a top tier business school and get a master’s degree.",
 	"skills": ["Entrepreneur", "Programmer", "Self-motivated", 
 	"Great people skills"],
-	"bioPic": "images/Profile.jpg"
+	"bioPic": "images/Profile.jpg",
+	"travel": ["Denver, CO", "Mexico City, Mexico", "London, UK",
+		"Saint Petersburg, Russia", "Oslo, Norway", "Helsinki, Finland",
+		"Stockholm, Sweden", "Cairo, Egypt", "Belize, Belize", "Cartagena, Colombia"]
 };
 
 // Declared method to display Bio info
@@ -121,7 +124,7 @@ education.display = function() {
 		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
 		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-		$(".education-entry:last").append(formattedName + formattedDates + formattedLocation
+		$(".education-entry:last").append(formattedName  + formattedLocation + formattedDates
 			+ formattedDegree);
 	}
 }
