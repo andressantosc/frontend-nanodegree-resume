@@ -99,19 +99,15 @@ var education = {
 			"name": "Northeastern University",
 			"dates": "2014 - 2016",
 			"location": "Boston",
-			"degree": "B.S. in Management"
-		},
-		{
-			"name": "Harvard University",
-			"dates": "2013 - 2014",
-			"location": "Boston",
-			"degree": "Harvard Extension Classes"
+			"degree": "B.S. in Management",
+			"description": "Transfer Student"
 		},
 		{
 			"name": "Monterrey Institute of Technology",
 			"dates": "2010 - 2013",
 			"location": "Monterrey",
-			"degree": "B.A. in Economics"
+			"degree": "B.A. in Economics",
+			"description": "Three years studying economics, with a strong foundation in Mathematics and Statistics. Took a leave of absence to focus on building Neomesa."
 		}
 	]
 }
@@ -120,12 +116,19 @@ var education = {
 education.display = function() {
 	for (school in education.schools) {
 		$("#education").append(HTMLschoolStart);
-		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
-		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-		$(".education-entry:last").append(formattedName  + formattedLocation + formattedDates
-			+ formattedDegree);
+		var formattedName = HTMLschoolName.replace("%data%", 
+							education.schools[school].name);
+		var formattedDates = HTMLschoolDates.replace("%data%", 
+							education.schools[school].dates);
+		var formattedLocation = HTMLschoolLocation.replace("%data%", 
+							education.schools[school].location);
+		var formattedDegree = HTMLschoolDegree.replace("%data%", 
+							education.schools[school].degree);
+		var formattedDescription = HTMLschoolDescription.replace("%data%", 
+							education.schools[school].description);
+		$(".education-entry:last").append(formattedName  + formattedDegree + 
+										formattedLocation + formattedDates
+										+ formattedDescription);
 	}
 }
 
