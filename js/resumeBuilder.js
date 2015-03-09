@@ -1,7 +1,7 @@
 // Declared object that contains bio information
 var bio = {
 	"name": "Andres Santos",
-	"role": "Web Developer",
+	"role": "Entrepreneur",
 	"contacts": {
 		"mobile":"811-243-0989",
 		"email": "andres.santos188@gmail.com",
