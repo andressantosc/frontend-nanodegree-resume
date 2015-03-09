@@ -48,6 +48,10 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
+.role {
+	font-size: 18px;
+	color: black;
+}
 
 .date-text {
   font-style: italic;
@@ -142,7 +146,6 @@ ul {
 .biopic {
   float: left;
   padding: 10px;
-  width: 200px;
   display: none;
 }
 
