@@ -121,7 +121,7 @@ a {
 }
 
 #header {
-  background-image:url("../../../../Wallpapers/back4.jpeg");
+  background-image:url("../images/back.jpg");
   position: relative;
   background-size: cover;
   overflow: hidden;
@@ -177,6 +177,10 @@ span {
   text-align: center;
 }
 
+#letsConnect h2 {
+	padding-top: 10px;
+}
+
 @media only screen and (max-width: 1024px) {
   #letsConnect {
     margin-top: 5%;
@@ -212,6 +216,10 @@ span {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+}
+
+#footerContacts {
+	margin-bottom: 0;
 }
 
 @media only screen and (min-width: 750px) {

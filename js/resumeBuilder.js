@@ -18,18 +18,23 @@ var bio = {
 		"Stockholm, Sweden", "Cairo, Egypt", "Belize, Belize", "Cartagena, Colombia"]
 };
 
-// Declared method to display Bio info
+// Declared method to display Bio info (header and footer)
 bio.display = function() {
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	$("#topContacts").prepend(formattedLocation);
+	$("#footerContacts").prepend(formattedLocation);
 	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 	$("#topContacts").prepend(formattedGithub);
+	$("#footerContacts").prepend(formattedGithub);
 	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 	$("#topContacts").prepend(formattedTwitter);
+	$("#footerContacts").prepend(formattedTwitter);
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 	$("#topContacts").prepend(formattedEmail);
+	$("#footerContacts").prepend(formattedEmail);
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 	$("#topContacts").prepend(formattedMobile);
+	$("#footerContacts").prepend(formattedMobile);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	// Inserted Title Name and Role to HTML
 	$("#header").prepend(formattedRole);
