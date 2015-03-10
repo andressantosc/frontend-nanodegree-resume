@@ -13,6 +13,12 @@
   padding-right: 5%;
 }
 
+h2, h3, h4, h5 {
+  padding:10px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 h1 {
   font-size: 40px;
   color: #F5A623;
@@ -25,7 +31,9 @@ h2 {
   font-size: 24px;
   color: #999999;
   line-height: 29px;
-  padding: 10px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  margin-top: 0;
 }
 
 h3 {
@@ -40,12 +48,6 @@ h4 {
   font-size: 14px;
   color: #4A4A4A;
   line-height: 17px;
-}
-
-h2, h3, h4, h5 {
-  padding:10px;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 .role {
@@ -118,9 +120,11 @@ a {
   background-color: #4A4A4A;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-image:url("../../../../Wallpapers/back4.jpeg");
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .flex-box {
