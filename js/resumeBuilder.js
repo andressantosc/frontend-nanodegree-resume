@@ -57,18 +57,25 @@ bio.display();
 var work = {
 	"jobs": [ 
 		{ 
-			"position": "Co-founder",
-			"employer": "Neomesa S.A. de C.V.",
+			"position": "Co-founder and Board Member",
+			"employer": "Aguila Soul",
+			"yearsWorked": "2015 - Present",
+			"location": "Monterrey",
+			"description": "Aguila Soul is Neomesa's first joint venture. It was created as a parternship with Grupo Culinaria, one of the most succesful and prestigious restaurant groups of Mexico, with over 20 years of experience in the industry. The new venture has created an innovative casual mexican restaurant concept called Aguila Soul and is currently operating it's first restaurant."
+		},
+		{ 
+			"position": "Co-founder and COO",
+			"employer": "Neomesa",
 			"yearsWorked": "2012 - Present",
 			"location": "Monterrey",
-			"description": "Retail operations focusing on the Restaurant Industry."
+			"description": "Neomesa was created when I was 20 years old as a holding company for future projects. The first project was the regional development of a restaurant franchise from Spain called 100 Montaditos."
 		},
 		{
 			"position": "Financial Analyst Intern",
 			"employer": "Alfa Corporativo",
 			"yearsWorked": "2010 - 2011",
 			"location": "Monterrey",
-			"description": "Focus in financial innovation and hedging strategies."
+			"description": "Worked in a demanding environment in one of Mexico's largest industrial conglomerates, with revenues of $15.9 billion dollars. As an intern, I undertook projects within the derivatives, financial planning and debt management departments. I started working there at the age of 18, still in high school, becoming the youngest intern in the company."
 		}
 	]
 }
