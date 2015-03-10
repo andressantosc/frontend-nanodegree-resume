@@ -157,8 +157,21 @@ ul {
   display: none;
 }
 
+.container-fluid {
+  padding: 0;
+}
+
+.projectDiv {
+	min-height: 275px;
+	padding-left: 2.5%;
+}
+
 img {
   padding: 10px;
+}
+
+#main {
+	overflow: hidden;
 }
 
 /* Bar chart stuff */
@@ -183,6 +196,7 @@ span {
 
 #letsConnect h2 {
 	padding-top: 10px;
+	margin-bottom: 0;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -224,6 +238,7 @@ span {
 
 #footerContacts {
 	margin-bottom: 0;
+	margin-top: 0;
 }
 
 @media only screen and (min-width: 750px) {
