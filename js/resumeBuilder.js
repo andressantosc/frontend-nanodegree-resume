@@ -9,7 +9,7 @@ var bio = {
 		"twitter": "asantos188",
 		"location": "Monterrey, Mexico"
 	},
-	"welcomeMessage": "My name is Andres Santos and I'm an entrepreneur and front-end web developer. I have a mixed background in retail operations, franchise development and corporate finance. I am passionate about new technology and I always use my free time to enhance my programming skills. My dream job is about helping entrepreneurs in taking their ideas from concept to reality.",
+	"welcomeMessage": "My name is Andres Santos and I'm an entrepreneur and front-end web developer. I have a mixed background in retail operations, franchise development and corporate finance. I am passionate about new technology and I always use my free time to enhance my programming skills. My dream job is to help entrepreneurs to take their ideas from concept to reality.",
 	"skills": ["Entrepreneur", "Programmer", "Self-motivated", 
 	"Great people skills"],
 	"bioPic": "images/Profile.jpg",
