@@ -10,8 +10,8 @@ var bio = {
 		"location": "Monterrey, Mexico"
 	},
 	"welcomeMessage": "My name is Andres Santos and I'm an entrepreneur and front-end web developer. I have a mixed background in retail operations, franchise development and corporate finance. I am passionate about new technology and I always use my free time to enhance my programming skills. My dream job is to help entrepreneurs to take their ideas from concept to reality.",
-	"skills": ["Entrepreneur", "Programmer", "Self-motivated", 
-	"Great people skills"],
+	"skills": ["HTML5", "CSS3", "Javascript", 
+	"Restaurant Management", "Corporate Finance"],
 	"bioPic": "images/Profile.jpg",
 	"travel": ["Denver, CO", "Mexico City, Mexico", "London, UK",
 		"Saint Petersburg, Russia", "Oslo, Norway", "Helsinki, Finland",
